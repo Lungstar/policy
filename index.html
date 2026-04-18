@@ -1,30 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>User Data Deletion Policy</title>
+  <title>Privacy & Data Deletion Policy</title>
+  <style>
+    body { font-family: Arial; margin: 40px; }
+    .tab { cursor: pointer; padding: 10px 20px; display: inline-block; background: #eee; margin-right: 5px; }
+    .active { background: #ccc; }
+    .content { display: none; margin-top: 20px; }
+    .visible { display: block; }
+  </style>
 </head>
+
 <body>
-  <h1>User Data Deletion Policy</h1>
 
-  <p>We respect user privacy and are committed to ensuring that users have full control over their personal data.</p>
+<h1>App Policies</h1>
 
-  <h2>Data Deletion Request</h2>
+<div>
+  <span class="tab active" onclick="showTab('privacy')">Privacy Policy</span>
+  <span class="tab" onclick="showTab('deletion')">Data Deletion</span>
+</div>
 
-  <p>Users may request deletion of their personal data at any time:</p>
+<div id="privacy" class="content visible">
+  <h2>Privacy Policy</h2>
 
-  <h3>1. In-App Request</h3>
-  <p>Go to account settings and select "Delete Account".</p>
+  <p>We respect your privacy and are committed to protecting your personal information.</p>
 
-  <h3>2. Email Request</h3>
-  <p>Email: lungamnkosi@live.com</p>
-
-  <h2>Processing</h2>
+  <h3>Information We Collect</h3>
   <ul>
-    <li>Requests processed within 7–30 business days</li>
-    <li>All personal data permanently deleted</li>
+    <li>Account information (email, username)</li>
+    <li>Usage data (app interactions)</li>
   </ul>
 
-  <h2>Contact</h2>
-  <p>lungamnkosi@live.com</p>
+  <h3>How We Use Information</h3>
+  <ul>
+    <li>To provide and improve our services</li>
+    <li>To communicate with users</li>
+  </ul>
+
+  <h3>Data Sharing</h3>
+  <p>We do not sell your personal data. We may share data with trusted third-party services where necessary.</p>
+
+  <h3>Security</h3>
+  <p>We take reasonable measures to protect your data.</p>
+
+  <h3>Contact</h3>
+  <p>Email: lungamnkosi@live.com</p>
+</div>
+
+<div id="deletion" class="content">
+  <h2>User Data Deletion Policy</h2>
+
+  <p>Users may request deletion of their personal data at any time.</p>
+
+  <h3>How to Request Deletion</h3>
+  <ul>
+    <li>Use the "Delete Account" option in-app</li>
+    <li>Email: lungamnkosi@live.com</li>
+  </ul>
+
+  <h3>Processing</h3>
+  <ul>
+    <li>Requests handled within 7–30 business days</li>
+    <li>All personal data will be permanently deleted</li>
+  </ul>
+
+  <h3>Contact</h3>
+  <p>Email: lungamnkosi@live.com</p>
+</div>
+
+<script>
+function showTab(tabId) {
+  document.querySelectorAll('.content').forEach(el => el.classList.remove('visible'));
+  document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+
+  document.getElementById(tabId).classList.add('visible');
+  event.target.classList.add('active');
+}
+</script>
+
 </body>
 </html>
